@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Zombie.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -30,11 +31,14 @@ curve = SubResource( 1 )
 
 [node name="ZombieSpawnLocation" type="PathFollow2D" parent="ZombiePath"]
 position = Vector2( 0.3284, -1.0508 )
-rotation = -0.00131233
+rotation = -0.0013123
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
 [connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="timeout" from="ZombieTimer" to="." method="_on_ZombieTimer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]

@@ -5,7 +5,7 @@ export (PackedScene) var Zombie
 
 func _ready():
 	randomize()
-	new_game()
+	
 
 func _on_Player_hit():
 	print("catraplunchis")
@@ -32,6 +32,16 @@ func _on_StartTimer_timeout():
 	$ZombieTimer.start()
 
 func new_game():
-#    score = 0
+	var life = 100
+	$HUD.update_life(life)
+	$HUD.show_message("Ojota...")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
+
+func game_over():
+	$HUD.show_game_over()
+	get_tree().call_group("zombies", "queue_free")
+	
+
+func _on_HUD_start_game():
+	new_game()
