@@ -27,7 +27,7 @@ func _process(delta): # called at each frame
 		#$AnimatedSprite.play()
 	#else:
 		#$AnimatedSprite.stop()
-	
+	attack()
 	#jugador se mueve por la pantalla	
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)
@@ -62,6 +62,14 @@ func _on_Player_body_entered(_body):
 #	hide()  # Player disappears after being hit.
 	emit_signal("hit")
 	$CollisionShape2D.set_deferred("disabled", true) #espera a desactivar hasta que sea seguro
+
+func attack():
+   if Input.is_action_just_pressed("attack"):
+	   print("esto es un ataque básico")
+	
+func notify_hit():
+	print("I'm da player")
+	#call_deferred("_remove")	
 
 #reinicia
 func start(pos):

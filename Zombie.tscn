@@ -50,7 +50,7 @@ position = Vector2( 0, 0.235966 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "walkMale"
-frame = 3
+frame = 4
 playing = true
 __meta__ = {
 "_edit_group_": true

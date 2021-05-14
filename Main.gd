@@ -1,20 +1,20 @@
 extends Node
 
 export (PackedScene) var Zombie
-
+var zombie
 
 func _ready():
 	randomize()
 	
 
-func _on_Player_hit():
-	print("catraplunchis")
+#func _on_Player_hit():
+	#print("catraplunchis")
 
 func _on_ZombieTimer_timeout():
 	# Choose a random location on Path2D.
 	$ZombiePath/ZombieSpawnLocation.offset = randi()
 	# Create a Zombie instance and add it to the scene.
-	var zombie = Zombie.instance()
+	zombie = Zombie.instance()
 	add_child(zombie)
 	# Set the mob's direction perpendicular to the path direction.
 	var direction = $ZombiePath/ZombieSpawnLocation.rotation + PI / 2
@@ -34,7 +34,7 @@ func _on_StartTimer_timeout():
 func new_game():
 	var life = 100
 	$HUD.update_life(life)
-	$HUD.show_message("Ojota...")
+	$HUD.show_message("Guarda que son zombies...")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 
