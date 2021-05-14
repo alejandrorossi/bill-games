@@ -24,14 +24,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "walkMale",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "walkFemale",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 17 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "walkMale",
 "speed": 5.0
 } ]
 
@@ -49,7 +49,6 @@ position = Vector2( 0, 0.235966 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
 animation = "walkMale"
-frame = 3
 playing = true
 __meta__ = {
 "_edit_group_": true

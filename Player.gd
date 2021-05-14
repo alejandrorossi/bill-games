@@ -24,9 +24,9 @@ func _process(delta): # called at each frame
 		velocity.y -= 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$AnimatedSprite.play()
-	else:
-		$AnimatedSprite.stop()
+		#$AnimatedSprite.play()
+	#else:
+		#$AnimatedSprite.stop()
 	
 	#jugador se mueve por la pantalla	
 	position += velocity * delta

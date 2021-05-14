@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.0229, 97.91 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.0229, 23.9529 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 12.2709, 48.8124 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 97.1335, 5.92953 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 21.0068, 5.92953 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 40.9746, 5.92953 )
+
+[node name="Casa" type="StaticBody2D"]
+position = Vector2( 241.668, 357.6 )
+scale = Vector2( 0.600294, 1.20542 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 43.8857, 1.65782 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -148.679, -72.6638 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( -148.679, 68.4144 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( -179.878, -0.571045 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2( -58.8243, 96.3813 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2( 9.81439, -90.0656 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2( -95.0157, -91.3085 )
+shape = SubResource( 6 )
