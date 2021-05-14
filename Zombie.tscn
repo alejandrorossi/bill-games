@@ -40,15 +40,17 @@ radius = 23.0306
 height = 56.1661
 
 [node name="Zombie" type="RigidBody2D"]
+scale = Vector2( 0.1, 0.1 )
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 21 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 0.235966 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "walkMale"
+frame = 3
 playing = true
 __meta__ = {
 "_edit_group_": true
